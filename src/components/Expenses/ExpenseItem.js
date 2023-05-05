@@ -17,12 +17,12 @@ const ExpenseItem = props => {
     
     const clickHandler = () => {
         setTitle(title + ' updated');
-        console.log('Title: ' + title);// this is not getting update yet
+        // console.log('Title: ' + title);// this is not getting update yet
     }
     
     const clickHandlerPrice = () => {
         setAmount(amount + 10);
-        console.log('Amount: ' + props.expense.amount);// this will be the first one
+        // console.log('Amount: ' + props.expense.amount);// this will be the first one
     }
 
     return (
@@ -32,7 +32,10 @@ const ExpenseItem = props => {
                 <h2>{title}</h2>
                 <div className='expense-item__price'>${amount}</div>
                 <button onClick={clickHandler}>Change Title</button>
+                {/*
+                <button onClick={clickHandler}>Change Title</button>
                 <button onClick={clickHandlerPrice}>Change Price</button>
+                */}
             </div>
         </Card>
     );

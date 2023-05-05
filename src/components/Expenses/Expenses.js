@@ -1,35 +1,32 @@
 import './Expenses.css';
 import ExpenseItem from './ExpenseItem';
 
-const Expenses = () => {
+import ExpenseFilter from '../ExpenseFilter/ExpenseFilter';
 
-    const expenses = [
-        {
-          id: 'e1',
-          date: new Date(2021, 2, 28),
-          title: 'Car Insurance',
-          amount: 100.32
-        },
-        {
-          id: 'e2',
-          date: new Date(2021, 2, 28),
-          title: 'Car Insurance 2',
-          amount: 200.32
-        },
-        {
-          id: 'e3',
-          date: new Date(2021, 2, 28),
-          title: 'Car Insurance 3',
-          amount: 300.32
-        }
-    ]
+import { useState } from 'react';
+
+import Card from '../UI/Card';
+
+const Expenses = (props) => {
+
+    const {items:expenses} = props;
+    
+    const [filteredYear, setFilteredYear] = useState('2021');
+
+    const filterHandler = (filter) =>{
+      setFilteredYear(filter.year)
+    }
     
     return (
-        <div className='expenses'>
-            <ExpenseItem expense={expenses[0]}></ExpenseItem>
-            <ExpenseItem expense={expenses[1]}></ExpenseItem>
-            <ExpenseItem expense={expenses[2]}></ExpenseItem>
-        </div>
+        <Card className='expenses' >
+            <ExpenseFilter selected={filteredYear} onFilterChange={filterHandler}></ExpenseFilter>
+            {expenses.map((item)=>
+            <div>
+              <div style={{color:'white'}}>{item.title}</div>
+              <ExpenseItem expense={item}></ExpenseItem>
+            </div>
+            )}
+        </Card>
     );
 }
 
