@@ -28,14 +28,17 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
 
-  const [expenses, setExpenses] = useState([]);
-
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const addExpenseHandler = (expense) =>{
 
     setExpenses((prevState)=>{
       const newArr = [expense,...prevState];
       return newArr;
     })
+  }
+
+  const cancelExpenseHandler = () =>{
+
   }
 
   return (
