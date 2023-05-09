@@ -7,10 +7,14 @@ import './index.css';
 import App from './Parte4_Effects/src/App';
 import reportWebVitals from './reportWebVitals';
 
+import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthContextProvider>
+      <App />
+    </AuthContextProvider>
   </React.StrictMode>
 );
 
