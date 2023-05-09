@@ -4,17 +4,21 @@ import './index.css';
 //import App from './Parte1_Basics/App';
 //import App from './Parte2_Styling/App';
 //import App from './Parte3_Practice_seccion_8/src/App';
-import App from './Parte4_Effects/src/App';
+//import App from './Parte4_Effects/src/App';
+import App from './Parte5_Food_order_app/src/App';
 import reportWebVitals from './reportWebVitals';
 
-import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
+//import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthContextProvider>
-      <App />
-    </AuthContextProvider>
+    {/*Used in Parte4
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
+    */}
+    <App />
   </React.StrictMode>
 );
 
