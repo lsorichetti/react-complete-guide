@@ -5,7 +5,9 @@ import './index.css';
 //import App from './Parte2_Styling/App';
 //import App from './Parte3_Practice_seccion_8/src/App';
 //import App from './Parte4_Effects/src/App';
-import App from './Parte5_Food_order_app/src/App';
+//import App from './Parte5_Food_order_app/src/App';
+//import App from './Parte6_ClassComponents/src/App';
+import App from './Parte7_Http/src/App';
 import reportWebVitals from './reportWebVitals';
 
 //import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
