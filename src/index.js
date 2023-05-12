@@ -9,8 +9,17 @@ import './index.css';
 //import App from './Parte6_ClassComponents/src/App';
 //import App from './Parte7_Http/src/App';
 //import App from './Parte8_CustomHooks/src/App';
-import App from './Parte9_Forms/src/App';
+//import App from './Parte9_Forms/src/App';
+//import App from './Parte10_FoorOrderHttp/src/App';
+
+//For redux
+
+import { Provider } from 'react-redux';
+import store from './Parte11_Redux/src/store';
+
+import App from './Parte11_Redux/src/App';
 import reportWebVitals from './reportWebVitals';
+
 
 //import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
 
@@ -22,7 +31,10 @@ root.render(
         <App />
       </AuthContextProvider>
     */}
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+    
   </React.StrictMode>
 );
 
