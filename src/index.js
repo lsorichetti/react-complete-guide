@@ -11,17 +11,21 @@ import './index.css';
 //import App from './Parte8_CustomHooks/src/App';
 //import App from './Parte9_Forms/src/App';
 //import App from './Parte10_FoorOrderHttp/src/App';
+//import App from './Parte11_Redux/src/App';
+import App from './Parte12_ReduxAdvanced/src/App';
 
-//For redux
+/* Parte4_Effects 
+import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
+*/
 
+/* Parte11_Redux 
 import { Provider } from 'react-redux';
 import store from './Parte11_Redux/src/store';
+*/
+import { Provider } from 'react-redux';
+import store from './Parte12_ReduxAdvanced/src/store';
 
-import App from './Parte11_Redux/src/App';
 import reportWebVitals from './reportWebVitals';
-
-
-//import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
