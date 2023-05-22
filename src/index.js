@@ -12,7 +12,7 @@ import './index.css';
 //import App from './Parte9_Forms/src/App';
 //import App from './Parte10_FoorOrderHttp/src/App';
 //import App from './Parte11_Redux/src/App';
-import App from './Parte12_ReduxAdvanced/src/App';
+//import App from './Parte12_ReduxAdvanced/src/App';
 
 /* Parte4_Effects 
 import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
@@ -22,9 +22,12 @@ import { AuthContextProvider } from './Parte4_Effects/store/auth-context';
 import { Provider } from 'react-redux';
 import store from './Parte11_Redux/src/store';
 */
+/* Parte12_ReduxAdvanced 
 import { Provider } from 'react-redux';
 import store from './Parte12_ReduxAdvanced/src/store';
+*/
 
+import App from './Parte13_UnitTests/src/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,9 +38,11 @@ root.render(
         <App />
       </AuthContextProvider>
     */}
-    <Provider store={store}>
-      <App />
-    </Provider>
+    {/* Used in Parte11 y Parte12
+      <Provider store={store}>
+        <App />
+      </Provider>
+    */}
     
   </React.StrictMode>
 );
